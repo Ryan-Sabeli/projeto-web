@@ -18,7 +18,7 @@ export let usuarios: Usuario[] = [
     email: "maria@example.com",
     senha: "admin123",
     confimarSenha: "",
-    logado: false
+    logado: true
   },
   {
     id: 3,
