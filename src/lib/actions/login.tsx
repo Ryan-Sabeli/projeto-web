@@ -5,21 +5,20 @@ import { redirect } from 'next/navigation'
 import { usuarios } from "../data";
 import { revalidatePath } from "next/cache";
 
-export async function login(username:string, password: string) {
-    try {
-        if (username == 'Maria' && password == 'admin123')  {
-            usuarios[1].logado = true
-            
-        }
-        
-        if (username == 'João' && password == 'senha123')  {
-            usuarios[0].logado = true
-            
-        }
+export async function loginAction(formData: FormData) {
+    const response = await fetch(
+        `${process.env.BASE_URL_API}/json/jwt-auth/v1/token`,
+        {
+          method: 'POST',
+          body: formData,
+        },
+      );
+      const data = await response.json();
+      cookies().set('token', data.token, {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'lax',
+        maxAge: 60 * 60 * 24,
+      });
 
-    } catch (err) {
-        return false
-    }
-    revalidatePath('/')
-    redirect('/')
   }
