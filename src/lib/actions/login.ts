@@ -2,7 +2,7 @@
 
 import { cookies } from "next/headers";
 import { redirect } from 'next/navigation'
-import { TOKEN_POST, usuarios } from "../data";
+import { TOKEN_POST } from "../data";
 import { revalidatePath } from "next/cache";
 import { Token } from "../definitions";
 import apiError from "../functions/api-error";
