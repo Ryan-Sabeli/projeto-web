@@ -1,5 +1,5 @@
 import Login from "@/components/Login";
-import { usuarios } from "@/lib/data";
+
 
 
 export default function Home() {
