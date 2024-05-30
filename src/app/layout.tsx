@@ -19,12 +19,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-        {usuarios[1].logado || usuarios[0].logado ? <Header /> : null}
-        
-        <h1>Usuario Comum</h1>
-          {usuarios[0].logado ? 'Logado' : 'Não logado'}
-        <h1>Usuario adm</h1>
-          {usuarios[1].logado ? 'Logado' : 'Não logado'}
+        <Header />
         {children}
       
         </body>

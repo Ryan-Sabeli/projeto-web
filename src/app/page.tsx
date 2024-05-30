@@ -5,7 +5,7 @@ import { usuarios } from "@/lib/data";
 export default function Home() {
   return (
     <main>
-      {usuarios[1].logado || usuarios[1].logado ? <h1>Seja bem, vindo!</h1> : <Login />}    
+      <h1>HOME</h1>   
     </main>
   );
 }

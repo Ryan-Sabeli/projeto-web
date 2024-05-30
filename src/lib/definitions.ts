@@ -1,11 +1,12 @@
 
 export type Usuario = {
-    id?: number
+    id?: number 
     nome: string
+    municipio: string
+    telefone: string
     email: string
     senha: string
-    confimarSenha: string 
-    logado?: boolean
+    is_adm: boolean
     
 }
 
@@ -29,3 +30,14 @@ export type Voto = {
     bairro: string
     
 }
+
+export type Token = {
+    access_token: string
+    refresh_token: string
+    token_type: string
+}
+
+export type InputProps = React.ComponentProps<'input'> & {
+    label: string;
+    error?: string;
+  };
