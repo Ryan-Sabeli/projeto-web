@@ -14,6 +14,7 @@
     "@tanstack/react-table": "^8.16.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "jose": "^5.4.0",
     "lucide-react": "^0.376.0",
     "next": "14.1.4",
     "react": "^18",

@@ -1,24 +1,25 @@
 import { Coordenadores, Usuario, Voto } from "./definitions";
-import { revalidatePath, revalidateTag } from "next/cache";
+
+
 const API_URL = process.env.BASE_URL_API
 
 
 export function TOKEN_POST() {
   return {
-    url:  API_URL + 'token/',
+    url:  API_URL + '/token/',
   };
 }
 
 
 export function TOKEN_VALIDATE_POST() {
   return {
-    url: API_URL + '/jwt-auth/v1/token/validate',
+    url: API_URL + '/token/validate/',
   };
 }
 
 export function USER_GET() {
   return {
-    url: API_URL + '/api/user',
+    url: API_URL + '/usuario/',
   };
 }
 
@@ -30,15 +31,19 @@ export function USER_POST() {
 
 
 export async function GetUsuarios() {
-  return null
+  let a = {} as Usuario
+  return a 
+  return a
 }
 
 export async function GetVotos() {
-  return null 
-
+  let a = {} as Voto[]
+  return a 
+  
 }
 export async function GetCoordenadores() {
-  return null
+  let a = {} as Coordenadores
+  return a 
 }
 
 export async function adicionarUsuario(usuario: Usuario) {
