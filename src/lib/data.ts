@@ -31,9 +31,9 @@ export function USER_POST() {
 
 
 export async function GetUsuarios() {
-  let a = {} as Usuario
+  let a = {} as Usuario[]
   return a 
-  return a
+
 }
 
 export async function GetVotos() {
